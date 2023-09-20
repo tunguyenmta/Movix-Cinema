@@ -4,7 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useSelector } from "react-redux";
 import "./SearchResult.scss";
 
-import { fetchDataFromTMDB } from "../../utils/api";
+import { fetchDataFromTMDB } from "../../Utils/api.js";
 import ContentWrapper from "../Common/ContentWrapper/ContentWrapper";
 import MovieCard from "../../Components/Common/MovieCard/MovieCard";
 import Spinner from "../Common/Spinner/Spinner";
