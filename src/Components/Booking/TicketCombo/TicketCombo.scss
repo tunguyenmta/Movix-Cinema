@@ -1,0 +1,401 @@
+@import '../../../mixins.scss';
+.ticket-panel{
+    position: relative;
+    padding: 50px 0;
+    
+
+    .contentWrapper{
+        .ticket-list{
+            .text{
+                text-align: center;
+                font-size: 20px;
+                color: white;
+                font-weight: bold;
+                padding: 10px 0;
+            }
+            .ticket-wrapper{
+                display: flex;
+                @include md{
+                    justify-content: space-between;
+                    gap: 30px;
+                }
+                justify-content: space-between;
+                gap: 20px;
+                flex-wrap: wrap;
+                .ticket-card{
+                    &:hover{
+                        scale: 1.1;
+                    }
+                    cursor: pointer;
+                    transition: .7s;
+                    position: relative;
+                    border-radius: 10px;
+                    @include md{
+                        width: 30%;
+                    }
+                    width: 47%;
+                    @include md{
+                        padding: 10px;
+                    }
+                    padding: 5px;
+                    background: white;
+                    img{
+                        @include md{
+                            max-height: 150px;
+                        }
+                        width: 100%;
+                        max-height: 250px;
+                    }
+                    .ticket-info{
+                        position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        text-align: center;
+                        .ticket-name{
+                            @include md{
+                                font-size: 16px;
+                                padding: 5px 0;
+                            }
+                            display: block;
+                            font-weight: bold;
+                            font-size: 13px;
+                        }
+                        .ticket-add{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .btn-minus, .btn-plus{
+                                @include md{
+                                    font-size: 20px;
+                                }
+                                border: 0;
+                                background-color: transparent;
+                                font-size: 16px;
+                                line-height: 16px;
+                                padding: 0 5px;
+                                cursor: pointer;
+                                transition: .5s;
+                                &:hover{
+                                    scale: 1.5;
+                                }
+                            }
+                            .ticket-number{
+                               
+                                color: var(--orange);
+                                font-weight: bold;
+                                border-radius: 50%;
+                            }
+                        }
+                        p{
+                            @include md{
+                                font-size: 16px;
+                            }
+                            padding: 2px 0;
+                            span{
+                                font-weight: bold;
+                                font-size: 13px;
+                            }
+                            span:last-of-type, span:nth-of-type(2){
+                                color: var(--orange);
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .combo-list{
+            .text{
+                text-align: center;
+                font-size: 20px;
+                color: white;
+                font-weight: bold;
+                padding: 10px 0;
+            }
+            .combo-wrapper{
+                display: flex;
+                justify-content: space-between;
+                @include md{
+                    gap: 20px;
+                }
+                gap: 10px;
+                flex-wrap: wrap;
+                .combo-card{
+                    &:hover{
+                        scale: 1.1;
+                    }
+                    cursor: pointer;
+                    transition: .7s;
+                    position: relative;
+                    border-radius: 10px;
+                    @include md{
+                        width: 30%;
+                    }
+                    width: 48%;
+                    padding: 10px ;
+                    background: white;
+                    img{
+                        width: 100%;
+                        max-height: 150px;
+                    }
+                    .combo-info{
+                        
+                        text-align: center;
+                        .combo-name{
+                            @include md{
+                                font-size: 16px;
+                            }
+                            font-size: 13px;
+                            display: block;
+                            padding: 5px 0;
+                            font-weight: bold;
+                        }
+                        .combo-add{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .btn-minus, .btn-plus{
+                                @include md{
+                                    font-size: 20px;
+                                }
+                                border: 0;
+                                background-color: transparent;
+                                font-size: 16px;
+                                line-height: 16px;
+                                padding: 0 5px;
+                                cursor: pointer;
+                                transition: .5s;
+                                &:hover{
+                                    scale: 1.5;
+                                }
+                            }
+                            .combo-number{
+                                
+                                color: var(--orange);
+                                font-weight: bold;
+                                border-radius: 50%;
+                            }
+                        }
+                        p{
+                            padding: 2px 0;
+                            @include md{
+                                font-size: 16px;
+                            }
+                            span{
+                                font-weight: bold;
+                                font-size: 13px;
+                            }
+                            span:last-of-type, span:nth-of-type(2){
+                                color: var(--orange);
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+            .ticket-next{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0;
+                .btn-next{
+                    @include md{
+                        width: 10%;
+                    }
+                    width: 30%;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover{
+                        scale: 1.2;
+                    }
+                }
+            }
+        
+            .seat-layout{
+                
+                .seat-warn{
+                    text-align: center;
+                    padding: 10px 0;
+                    p{
+                        color: var(--orange);
+                        font-weight: bold;
+                    }
+                }
+                
+                .seatplan-wrapper{
+                    padding: 50px 0;
+                    position: relative;
+                    .screen-img{
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        width: 800px;
+                        transform: translateX(-50%);
+                        
+                        @media screen and (min-width: 350px)  {
+                            left: 540px;
+                        }
+                        p{
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: white;
+                            text-align: center;
+                            padding: 5px 0;
+                        }
+                        span{
+                            height: 5px;
+                            border-radius: 5px;
+                            width: 100%;
+                            display: block;
+                            background-color: white;
+                        }
+                    }
+                    overflow-x: scroll;
+                    .seat-row{
+                        width: 90%;
+                        display: flex;
+                        padding-left: 10px;
+                        align-items: center;
+                        .seat-item{
+                            transition: .5s;
+                            display: block;
+                            width: 30px;
+                            min-width: 30px;
+                            height: 25px;
+                            margin: 3px;
+                            border: 0;
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                            cursor: pointer;
+                            
+                        }
+                        .hover-enable{
+                            transition: .5s;
+                            &:hover{
+                                background-color: var(--orange);
+                            }
+                        }
+                        .seat-chosen{
+                            background-color: var(--orange);
+                        }
+                        .left-seat{
+                            width: 33px;
+                            min-width: 33px;
+                            margin-right: 0;
+                        }
+                        .right-seat{
+                            width: 33px;
+                            min-width: 33px;
+                            margin-left: 0;
+                        }
+                        .row-alphabet{
+                            color: white;
+                            display: inline-block;
+                            width: 25px ;
+                            min-width: 25px;
+                            height: 25px;
+                            text-align: center;
+                            line-height: 30px;
+                            margin: 0 10px;
+                            font-weight: bold;
+                        }
+                        .hidden{
+                            visibility: hidden;
+                        }
+                        .showing{
+                            visibility: visible;
+                        }
+                    }
+                }
+                .seat-info{
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include md{
+                        gap: 50px;
+                    }
+                    gap: 20px;
+                    .info-item{
+                        color: white;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        span:last-of-type{
+                            @include md{
+                                font-size: 16px;
+                            }
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                        .seat-available{
+                            line-height: 30px;
+                            display: inline-block;
+                            width: 30px;
+                            height: 25px;
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                            border: 1px solid black;
+                            background-color: white;
+                        }
+                        .text-served{
+                            color: gray;
+                        }
+                        .seat-served{
+                            line-height: 30px;
+                            display: inline-block;
+                            width: 30px;
+                            height: 25px;
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                            border: 1px solid black;
+                            background-color: gray;
+                        }
+                        .seat-selected{
+                            line-height: 30px;
+                            display: inline-block;
+                            width: 30px;
+                            height: 25px;
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                            border: 1px solid black;
+                            background-color:var(--orange);
+                        }
+                        .text-selected{
+                            color: var(--orange);
+                        }
+                    }
+                }
+                .purchase-section{
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px 0;
+                    .btn-purchase{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        padding: 10px 15px;
+                        border-radius: 5px;
+                        color: white;
+                        border: 0;
+                        background-color: green;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: .5s;
+                        &:hover{
+                            background-color: var(--orange);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }

@@ -1,0 +1,424 @@
+@import '../../mixins.scss';
+.user-profile{
+    padding: 100px 0;
+    margin-bottom: 30px;
+    color: white;
+    min-height: 65vh;
+    .contentWrapper{
+        @include md{
+            display: flex;
+            gap: 30px;
+        }
+        @media screen and (min-width: 768px) {
+            gap: 10px;
+        }
+        .left{
+        background: var(--gradient1);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 0 5px;
+        width: 100%;
+        max-height: 50vh;
+            @include md{
+                width: 25%;
+                top: 50px;
+                left: 50px;
+                padding: 0 5px;
+            }
+            .user-info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                padding: 10px 0;
+
+                @include md{
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .user-img{
+                    @include md{
+                        width: 30px;
+                        height: 30px;
+                        line-height: 35px;
+                    }
+                        text-align: center;
+                        line-height: 30px;
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background-color: var(--black);
+                    
+                }
+                border-bottom: 1px solid gray;
+            }
+            .option-list{
+                ul{
+                    list-style: none;
+                    li{
+                        @include md{
+                            padding: 20px 5px; 
+                            font-size: 14px; 
+                        }
+                        @media screen and (min-width: 900px) {
+                            padding: 20px; 
+                            font-size: 14px; 
+                        }
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                        cursor: pointer;
+                        transition: .5s;
+                        &:hover{
+                            color: var(--pink);
+                            border: 1px solid var(--orange);
+                            background-color: var(--black);
+                        }
+
+                        span{
+                            @include md{
+                                width: 35px;
+                                font-size: 20px;
+                            }
+                            display: inline-block;
+                            width: 20px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            margin-top: 20px;
+            @include md{
+                width: 75%;
+                margin-top: 0;
+            }
+            width: 100%;
+            background-color: #27293d;
+            border-radius: 10px;
+            padding: 0 20px;
+            .ticket-panel{
+                padding: 20px 0;
+                .list-ticket{
+                    h3{
+                        text-align: center;
+                        font-size: 18px;
+                        @include md{
+                            font-size: 24px;
+                        }
+                    }
+                    .ticket-wrapper{
+                        .ticket-card{
+                            &:hover{
+                                scale: 1.05;
+                            }
+                            transition: .5s;
+                            background-color: var(--pink);
+                            border-radius: 20px;
+                            margin: 20px 0;
+                            height: auto;
+                            @include md{
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                
+                                height: 200px;
+                            }
+                            @media screen and (min-width: 900px) {
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                height: 250px;
+                            }
+                            @media screen and (min-width: 500px) and (max-width:768px) {
+                                width: 80%;
+                                margin: 20px auto;
+                            }
+                            
+                            .ticket-left{
+                                @include md{
+                                    width: 40%;
+                                }
+                                @media screen and (min-width: 768px) and (max-width:992px) {
+                                    width: 50%;
+                                }
+                                width: 100%;
+                                height: 100%;
+                                img{
+                                    @include md{
+                                        border-top-left-radius: 20px ;
+                                        border-bottom-left-radius: 20px ;
+                                        border-top-right-radius: 0;
+                                        max-height: unset
+                                    }
+                                    max-height: 200px;
+                                    border-top-left-radius: 20px;
+                                    border-top-right-radius: 20px;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .ticket-right{
+                                h3{
+                                    @include md{
+                                        font-size: 20px;
+                                    }
+                                    font-size: 18px;
+                                    color: var(--orange);
+                                }
+                               
+                                @media screen and (min-width: 992px) {
+                                    font-size: 16px;
+                                    width: 60%;
+                                }
+                                @media screen and (min-width: 768px) and (max-width:992px) {
+                                    width: 50%;
+                                }
+                                padding: 10px;
+                                font-size: 12px;
+                                p{
+                                    padding: 5px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .name-panel{
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                border-radius: 10px;
+                h4{
+                    color: white;
+                    text-align: center;
+                    font-size: 18px;
+                    @include md{
+                        font-size: 24px;
+                    }
+                }
+                .name-form{
+                    position: relative;
+                    padding: 30px 0;
+                    .name-input{
+                        @include md{
+                            width: 400px;
+                        }
+                        padding: 10px 50px;
+                        border-radius: 20px;
+                        border: 0;
+                        width: 300px;
+                        color: white;
+                        font-size: 14px;
+                        background-color: rgba($color: white, $alpha: .5);
+                        &::placeholder{
+                            color: var(--orange);
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    span{
+                        display: inline-block;
+                        width: 45px;
+                        height: 45px;
+                        background-color: white;
+                        color: var(--black);
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 45px;
+                        font-size: 20px;
+                        position: absolute;
+                        top: 25px;
+                        left: -5px;
+                    }
+                }
+                .password-form{
+                    position: relative; 
+                    .password-input{
+                        @include md{
+                            width: 400px;
+                        }
+                        height: 35px;
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        border: 0;
+                        width: 300px;
+                        color: white;
+                        font-size: 14px;
+                        background-color: rgba($color: white, $alpha: .5);
+                        &::placeholder{
+                            color: var(--orange);
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    span{
+                        display: inline-block;
+                        width: 45px;
+                        height: 45px;
+                        background-color: white;
+                        color: var(--black);
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 45px;
+                        font-size: 20px;
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                    }
+                }
+                .submit-section{
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    .btn-submit{
+                        @include md{
+                            width: 200px;
+                            padding: 15px;
+                            border-radius: 10px;
+                        }
+                        padding: 10px;
+                        width: 100px;
+                        border-radius: 5px;
+                        background-color: var(--pink);
+                        color: white;
+                        font-weight: bold;
+                        border: 0;
+                        cursor: pointer;
+                        transition: .5s;
+                        &:hover{
+                            background: var(--orange);
+                            color: var(--black);
+                        }
+                    }
+                }
+                
+            }
+            .password-panel{
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                border-radius: 10px;
+                h4{
+                    color: white;
+                    text-align: center;
+                    font-size: 18px;
+                    @include md{
+                        font-size: 24px;
+                    }
+                }
+                .past-form{
+                    position: relative;
+                    padding: 30px 0;
+                    .past-input{
+                        @include md{
+                            width: 400px;
+                        }
+                        padding: 10px 50px;
+                        border-radius: 20px;
+                        border: 0;
+                        width: 300px;
+                        color: white;
+                        font-size: 14px;
+                        background-color: rgba($color: white, $alpha: .5);
+                        &::placeholder{
+                            color: var(--orange);
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    span{
+                        display: inline-block;
+                        width: 45px;
+                        height: 45px;
+                        background-color: white;
+                        color: var(--black);
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 45px;
+                        font-size: 20px;
+                        position: absolute;
+                        top: 25px;
+                        left: -5px;
+                    }
+                }
+                .password-form{
+                    position: relative; 
+                    .newpass-input{
+                        @include md{
+                            width: 400px;
+                        }
+                        height: 35px;
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        border: 0;
+                        width: 300px;
+                        color: white;
+                        font-size: 14px;
+                        background-color: rgba($color: white, $alpha: .5);
+                        &::placeholder{
+                            color: var(--orange);
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    span{
+                        display: inline-block;
+                        width: 45px;
+                        height: 45px;
+                        background-color: white;
+                        color: var(--black);
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 45px;
+                        font-size: 20px;
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                    }
+                }
+                .submit-section{
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    .btn-submit{
+                        @include md{
+                            width: 200px;
+                            padding: 15px;
+                            border-radius: 10px;
+                        }
+                        padding: 10px;
+                        width: 100px;
+                        border-radius: 5px;
+                        background-color: var(--pink);
+                        color: white;
+                        font-weight: bold;
+                        border: 0;
+                        cursor: pointer;
+                        transition: .5s;
+                        &:hover{
+                            background: var(--orange);
+                            color: var(--black);
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../../mixins.scss';
+.credit-card{
+    height: 100%;
+    padding: unset;
+    @include md{
+        flex-direction: row;
+        padding: 0 20px;
+    }
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    .rccs{
+        margin: unset;
+        width: 90%;
+        .rccs__card{
+            width: 100%;
+        }
+        @include md{
+            width: 50%;
+        }
+    }
+    .form-container{
+        @include md{
+            width: 50%;
+        }
+        width: 90%;
+        padding: 0 10px;
+        form{
+            
+            input, select{
+                display: block;
+                padding: 10px 20px;
+                margin: 20px auto;
+                width: 90%;
+                box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+                border: 0;
+                border-radius: 5px;
+            }
+            
+        }
+        .purchase-button{
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            .btn-purchase{
+                padding: 10px;
+                border-radius: 10px;
+                width: 50%;
+                border: 0;
+                background-color: green;
+                color: white;
+                font-weight: bold;
+                transition: .5s;
+                cursor: pointer;
+                &:hover{
+                    background: var(--orange);
+                    color: var(--black);
+                }
+            }
+        }
+    }
+    
+    
+}
