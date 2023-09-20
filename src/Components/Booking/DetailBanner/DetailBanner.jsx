@@ -11,7 +11,7 @@ import Genres from "../../Common/Genres/Genres";
 import CircleRating from "../../Common/CircleRating/CircleRating";
 import Img from "../../Common/Img";
 import PosterFallback from "../../../assets/no-poster.png";
-import { PlayIcon } from "../Playbtn";
+import { PlayIcon } from "../PlayBtn";
 import VideoPopup from "../../Common/VideoPopup/VideoPopup";
 import { getMovieInfo } from "../../../Store/cinemaSlice";
 const dayOfWeek = {
