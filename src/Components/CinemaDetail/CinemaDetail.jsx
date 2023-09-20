@@ -4,7 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 import "./CinemaDetail.scss";
 
-import { fetchDataFromTMDB, fetchDataFromApi } from "../../utils/api";
+import { fetchDataFromTMDB, fetchDataFromApi } from "../../Utils/api";
 import ContentWrapper from "../Common/ContentWrapper/ContentWrapper";
 import MovieCard from "../../Components/Common/MovieCard/MovieCard";
 import Spinner from "../Common/Spinner/Spinner";
