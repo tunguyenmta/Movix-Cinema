@@ -14,8 +14,31 @@
     .rccs{
         margin: unset;
         width: 90%;
+        @media screen and (min-width:100px) and (max-width:350px) {
+            width: 95%;
+        }
         .rccs__card{
             width: 100%;
+            .rccs__number{
+                @media screen and (min-width:100px) and (max-width:350px) {
+                    font-size: 14px;
+                }
+            }
+            .rccs__name{
+                @media screen and (min-width:100px) and (max-width:350px) {
+                    font-size: 14px;
+                }
+            } 
+            .rccs__expiry{
+                .rccs__expiry__value{
+                    @media screen and (min-width:100px) and (max-width:350px) {
+                        font-size: 13px;
+                    }
+                }
+                @media screen and (min-width:100px) and (max-width:350px) {
+                    font-size: 14px;
+                }
+            }
         }
         @include md{
             width: 50%;
@@ -24,6 +47,9 @@
     .form-container{
         @include md{
             width: 50%;
+        }
+        @media screen and (min-width:150px) and (max-width:350px) {
+            width: 100%;
         }
         width: 90%;
         padding: 0 10px;

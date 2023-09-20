@@ -99,6 +99,9 @@
                 width: 75%;
                 margin-top: 0;
             }
+            @media screen and (min-width: 150px) and (max-width: 300px) {
+                padding: 0 5px;
+            }
             width: 100%;
             background-color: #27293d;
             border-radius: 10px;
@@ -198,12 +201,18 @@
                 align-items: center;
                 padding: 20px;
                 border-radius: 10px;
+                @media screen and (min-width: 150px) and (max-width: 300px) {
+                    padding: 10px 5px;
+                }
                 h4{
                     color: white;
                     text-align: center;
                     font-size: 18px;
                     @include md{
                         font-size: 24px;
+                    }
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        font-size: 14px;
                     }
                 }
                 .name-form{
@@ -212,6 +221,11 @@
                     .name-input{
                         @include md{
                             width: 400px;
+                        }
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 100%;
+                            padding: 5px 30px;
+                            font-size: 12px;
                         }
                         padding: 10px 50px;
                         border-radius: 20px;
@@ -231,6 +245,12 @@
                         display: inline-block;
                         width: 45px;
                         height: 45px;
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            top: 28px;
+                        }
                         background-color: white;
                         color: var(--black);
                         border-radius: 50%;
@@ -248,7 +268,11 @@
                         @include md{
                             width: 400px;
                         }
-                        height: 35px;
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 100%;
+                            padding: 5px 20px;
+                            font-size: 12px;
+                        }
                         padding: 10px 20px;
                         border-radius: 20px;
                         border: 0;
@@ -267,6 +291,12 @@
                         display: inline-block;
                         width: 45px;
                         height: 45px;
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 33px;
+                            
+                        }
                         background-color: white;
                         color: var(--black);
                         border-radius: 50%;
@@ -312,12 +342,18 @@
                 align-items: center;
                 padding: 20px;
                 border-radius: 10px;
+                @media screen and (min-width: 150px) and (max-width: 300px) {
+                    padding: 10px 5px;
+                }
                 h4{
                     color: white;
                     text-align: center;
                     font-size: 18px;
                     @include md{
                         font-size: 24px;
+                    }
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        font-size: 14px;
                     }
                 }
                 .past-form{
@@ -326,6 +362,11 @@
                     .past-input{
                         @include md{
                             width: 400px;
+                        }
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 100%;
+                            padding: 5px 30px;
+                            font-size: 12px;
                         }
                         padding: 10px 50px;
                         border-radius: 20px;
@@ -345,6 +386,12 @@
                         display: inline-block;
                         width: 45px;
                         height: 45px;
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            top: 28px;
+                        }
                         background-color: white;
                         color: var(--black);
                         border-radius: 50%;
@@ -362,7 +409,11 @@
                         @include md{
                             width: 400px;
                         }
-                        height: 35px;
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 100%;
+                            padding: 5px 20px;
+                            font-size: 12px;
+                        }
                         padding: 10px 20px;
                         border-radius: 20px;
                         border: 0;
@@ -381,6 +432,12 @@
                         display: inline-block;
                         width: 45px;
                         height: 45px;
+                        @media screen and (min-width: 150px) and (max-width: 300px) {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 33px;
+                            
+                        }
                         background-color: white;
                         color: var(--black);
                         border-radius: 50%;
