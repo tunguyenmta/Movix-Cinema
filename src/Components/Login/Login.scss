@@ -8,15 +8,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (min-width: 150px) and (max-width: 400px) {
+            padding: 10px;
+        }
         .login-form{
             border: 1px solid gray;
             padding: 20px;
             border-radius: 10px;
+
             box-shadow: 5px 5px 10px white;
+            @media screen and (min-width: 150px) and (max-width: 400px) {
+                padding: 5px;
+                width: 100%;
+            }
             h4{
                 color: white;
                 text-align: center;
                 font-size: 24px;
+                @media screen and (min-width: 150px) and (max-width: 400px) {
+                    font-size: 14px;
+                }
             }
             .email-form{
                 position: relative;
@@ -24,6 +35,11 @@
                 .email-input{
                     @include md{
                         width: 400px;
+                    }
+                    @media screen and (min-width: 150px) and (max-width: 400px) {
+                        width: 100%;
+                        padding: 5px 30px;
+                        font-size: 12px;
                     }
                     padding: 10px 50px;
                     border-radius: 20px;
@@ -43,6 +59,13 @@
                     display: inline-block;
                     width: 45px;
                     height: 45px;
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        top: 27px;
+                        left: -3px;
+                    }
                     background-color: white;
                     border-radius: 50%;
                     text-align: center;
@@ -59,7 +82,11 @@
                     @include md{
                         width: 400px;
                     }
-                    height: 35px;
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        width: 95%;
+                        padding: 5px 20px;
+                        font-size: 12px;
+                    }
                     padding: 10px 20px;
                     border-radius: 20px;
                     border: 0;
@@ -78,6 +105,13 @@
                     display: inline-block;
                     width: 45px;
                     height: 45px;
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 33px;
+                        top: -3px;
+                        right: 0;
+                    }
                     background-color: white;
                     border-radius: 50%;
                     text-align: center;
@@ -116,6 +150,10 @@
             .register-show{
                 text-align: center;
                 width: 100%;
+                @media screen and (min-width: 150px) and (max-width: 300px) {
+                   font-size: 12px;
+                    
+                }
                 color: white;
                 transition: .5s;
                 cursor: pointer;
@@ -137,9 +175,15 @@
             .email-form, .name-form{
                 position: relative;
                 padding: 30px 0;
+               
                 .email-input, .name-input{
                     @include md{
                         width: 400px;
+                    }
+                    @media screen and (min-width: 150px) and (max-width: 400px) {
+                        width: 100%;
+                        padding: 5px 30px;
+                        font-size: 12px;
                     }
                     padding: 10px 50px;
                     border-radius: 20px;
@@ -159,6 +203,13 @@
                     display: inline-block;
                     width: 45px;
                     height: 45px;
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        top: 27px;
+                        left: -3px;
+                    }
                     background-color: white;
                     border-radius: 50%;
                     text-align: center;
@@ -175,7 +226,11 @@
                     @include md{
                         width: 400px;
                     }
-                    height: 35px;
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        width: 95%;
+                        padding: 5px 20px;
+                        font-size: 12px;
+                    }
                     padding: 10px 20px;
                     border-radius: 20px;
                     border: 0;
@@ -194,6 +249,13 @@
                     display: inline-block;
                     width: 45px;
                     height: 45px;
+                    @media screen and (min-width: 150px) and (max-width: 300px) {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 33px;
+                        top: -3px;
+                        right: 0;
+                    }
                     background-color: white;
                     border-radius: 50%;
                     text-align: center;
@@ -205,6 +267,9 @@
                 }
             }
             .submit-button{
+                @media screen and (min-width: 150px) and (max-width: 300px) {
+                    padding: 10px 0;
+                }
                 padding: 20px 0;
                 display: flex;
                 justify-content: center;
@@ -235,6 +300,9 @@
                 color: white;
                 transition: .5s;
                 cursor: pointer;
+                @media screen and (min-width: 150px) and (max-width: 300px) {
+                   font-size: 12px;
+                }
                 &:hover{
                     color: var(--orange);
                 }
