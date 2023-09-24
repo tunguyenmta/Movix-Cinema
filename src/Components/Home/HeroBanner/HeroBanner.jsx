@@ -10,7 +10,10 @@ function HeroBanner() {
   const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
   const searchQueryHandler = (e) => {
-    if (e.keyCode === 13 && query.length > 0) {
+    if (
+      (e.keyCode === 13 && query.length > 0) ||
+      (e.type == "click" && query.length > 0)
+    ) {
       nav(`/search/${query}`);
     }
   };
