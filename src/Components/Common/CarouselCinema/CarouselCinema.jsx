@@ -53,11 +53,18 @@ function CarouselCinema({ data, loading }) {
                 <div
                   key={item.id}
                   className="carousel-item"
-                  onClick={() =>
+                  onClick={() => {
+                    sessionStorage.setItem(
+                      "cinema",
+                      JSON.stringify({
+                        cinemaName: `${item.name}`,
+                        cinemaCode: `${item.code}`,
+                      })
+                    );
                     nav(`/cinema/${item.code}`, {
                       state: { cinemaName: `${item.name}` },
-                    })
-                  }
+                    });
+                  }}
                 >
                   <div className="poster-block">
                     <Img

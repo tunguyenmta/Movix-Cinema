@@ -21,13 +21,24 @@ const CinemaDetail = () => {
   const [genresData, setGenresData] = useState([]);
   const fetchInitialData = () => {
     setLoading(true);
-    fetchDataFromApi(
-      `https://teachingserver.org/U2FsdGVkX18MaY1VB6bVfvVBm0wdPflO/cinema/cinemas/${code}`
-    ).then((res) => {
-      setData(res);
-      setPageNum((prev) => prev + 1);
-      setLoading(false);
-    });
+
+    if (!code) {
+      fetchDataFromApi(
+        `https://teachingserver.org/U2FsdGVkX18MaY1VB6bVfvVBm0wdPflO/cinema/cinemas/${JSON.parse(
+          sessionStorage.getItem("cinema").cinemaCode
+        )}`
+      ).then((res) => {
+        setData(res);
+      });
+    } else {
+      fetchDataFromApi(
+        `https://teachingserver.org/U2FsdGVkX18MaY1VB6bVfvVBm0wdPflO/cinema/cinemas/${code}`
+      ).then((res) => {
+        setData(res);
+        setPageNum((prev) => prev + 1);
+        setLoading(false);
+      });
+    }
   };
 
   const fetchNextPageData = () => {
@@ -80,6 +91,8 @@ const CinemaDetail = () => {
               <div className="pageTitle">
                 {`List ${data?.length > 1 ? "movies" : "movie"} of ${
                   location.state.cinemaName
+                    ? location.state.cinemaName
+                    : JSON.parse(sessionStorage.getItem("cinema").cinemaName)
                 }`}
               </div>
               <InfiniteScroll
